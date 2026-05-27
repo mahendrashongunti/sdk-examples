@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f7fa;
+    color: #2c3e50;
+}
+
+.access-mgmt-app {
+    min-height: 100vh;
+    padding: 0;
+}
+
+.app-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.create-button {
+    background-color: white;
+    color: #667eea;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.app-nav {
+    background-color: white;
+    padding: 0;
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #e1e8ed;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.app-nav button {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #5a6c7d;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.app-nav button:hover {
+    background-color: #f8f9fa;
+    color: #667eea;
+}
+
+.app-nav button.active {
+    color: #667eea;
+    border-bottom-color: #667eea;
+    background-color: #f8f9fa;
+}
+
+.error-message {
+    background-color: #fee;
+    color: #c33;
+    padding: 1rem;
+    margin: 1rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid #c33;
+}
+
+.error-message button {
+    background-color: transparent;
+    border: 1px solid #c33;
+    color: #c33;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+.filter-bar {
+    padding: 1.5rem 2rem;
+    background-color: white;
+    margin: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-bar label {
+    font-weight: 500;
+    color: #5a6c7d;
+}
+
+.filter-bar select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
