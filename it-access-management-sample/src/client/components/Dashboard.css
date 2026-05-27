@@ -1,0 +1,148 @@
+.dashboard {
+    padding: 2rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+.stat-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.stat-info h3 {
+    font-size: 0.9rem;
+    color: #8899a6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.stat-card.pending {
+    border-left: 4px solid #ffc107;
+}
+
+.stat-card.approved {
+    border-left: 4px solid #28a745;
+}
+
+.stat-card.active {
+    border-left: 4px solid #667eea;
+}
+
+.stat-card.emergency {
+    border-left: 4px solid #dc3545;
+}
+
+.dashboard-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.section {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.section h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.recent-list,
+.access-types-list {
+    list-style: none;
+}
+
+.recent-list li {
+    padding: 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.recent-list li:last-child {
+    border-bottom: none;
+}
+
+.request-type {
+    flex: 1;
+    color: #5a6c7d;
+}
+
+.access-types-list li {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.access-types-list li:last-child {
+    border-bottom: none;
+}
+
+.type-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.category-badge {
+    background-color: #e3f2fd;
+    color: #1565c0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.type-description {
+    color: #8899a6;
+    font-size: 0.9rem;
+}
