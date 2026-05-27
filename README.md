@@ -4,6 +4,15 @@ ServiceNow SDK Samples
 
 This repository contains sample code illustrating the [ServiceNow SDK](https://docs.servicenow.com/csh?topicname=servicenow-sdk.html&version=latest) and Fluent language. You can read, play with or adapt from these samples to create your own application.
 
+## 📚 Learning Path
+
+**New to ServiceNow SDK?** Check out our comprehensive [**Learning Path Guide**](./LEARNING_PATH.md) that provides:
+- Structured learning phases from beginner to advanced
+- Recommended learning sequences
+- Detailed explanations of each sample
+- Tips and best practices
+- A suggested first project to build
+
 ## Prerequisites
 
 - [node](https://nodejs.org/en/) v20+
