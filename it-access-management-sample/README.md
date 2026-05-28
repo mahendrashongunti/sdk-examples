@@ -4,6 +4,13 @@ A comprehensive, enterprise-grade IT Access Management System built with Service
 
 ## 🎯 Features
 
+### Developer Features
+- **🚀 Automated Table Constants**: Auto-generated type-safe enums for table and column names
+  - Zero-maintenance constants that regenerate on every build
+  - Full IDE autocomplete and type checking
+  - Eliminates typos and runtime errors
+  - See [Table Constants Documentation](docs/TABLE_CONSTANTS.md)
+
 ### Core Functionality
 - **Access Request Management**: Create, track, and manage IT access requests
 - **Approval Workflow**: Multi-level approval process with automatic routing
@@ -129,6 +136,7 @@ it-access-management-sample/
 ├── src/
 │   ├── fluent/              # Server-side ServiceNow code
 │   │   ├── tables/          # Table definitions
+│   │   ├── constants/       # Auto-generated constants (DO NOT EDIT)
 │   │   ├── business-rules/  # Business rule automation
 │   │   ├── client-scripts/  # Client-side form logic
 │   │   ├── script-includes/ # Reusable server functions
@@ -141,10 +149,43 @@ it-access-management-sample/
 │       ├── components/      # React components
 │       ├── services/        # API service classes
 │       └── types/           # TypeScript interfaces
+├── scripts/                 # Build and generation scripts
+├── docs/                    # Documentation
 ├── package.json
 ├── now.config.json
 └── README.md
 ```
+
+## 🔧 Type-Safe Development with Auto-Generated Constants
+
+This project features **automated generation of type-safe table and column constants**. The constants are automatically regenerated on every build from your table definitions.
+
+### Quick Example
+
+```typescript
+import { TableNames, TableColumns } from '../constants/tables';
+
+// Type-safe table and column references
+const gr = new GlideRecord(TableNames.REQUEST);
+gr.addQuery(TableColumns.REQUEST.STATE, 'pending_approval');
+gr.query();
+```
+
+### Benefits
+
+- ✅ **No Typos**: Compile-time checking prevents misspelled table/column names
+- ✅ **IDE Autocomplete**: Full IntelliSense for all tables and columns
+- ✅ **Refactoring Support**: Easily find and update all references
+- ✅ **Zero Maintenance**: Constants auto-update when you modify table definitions
+- ✅ **Self-Documenting**: Constants serve as documentation
+
+### Learn More
+
+See [Table Constants Documentation](docs/TABLE_CONSTANTS.md) for:
+- Complete usage guide
+- Advanced patterns
+- Migration examples
+- Best practices
 
 ## 💻 Usage
 
