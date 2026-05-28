@@ -5,10 +5,11 @@
     "license": "ISC",
     "scripts": {
         "dev": "now-sdk run dev",
-        "build": "now-sdk build",
+        "build": "npm run generate:constants && now-sdk build",
         "deploy": "now-sdk install",
         "transform": "now-sdk transform",
-        "types": "now-sdk dependencies"
+        "types": "now-sdk dependencies",
+        "generate:constants": "node scripts/generate-table-constants.js"
     },
     "devDependencies": {
         "@servicenow/glide": "catalog:",
